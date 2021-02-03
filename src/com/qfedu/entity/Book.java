@@ -1,16 +1,16 @@
 package com.qfedu.entity;
 
-public class book {
+public class Book {
     private String bid;
     private String bname;
     private Double price;
     private String author;
     private String did;
 
-    public book() {
+    public Book() {
     }
 
-    public book(String bid, String bname, Double price, String author, String did) {
+    public Book(String bid, String bname, Double price, String author, String did) {
         this.bid = bid;
         this.bname = bname;
         this.price = price;
@@ -60,7 +60,7 @@ public class book {
 
     @Override
     public String toString() {
-        return "book{" +
+        return "Book{" +
                 "bid='" + bid + '\'' +
                 ", bname='" + bname + '\'' +
                 ", price=" + price +
