@@ -5,18 +5,29 @@ public class Book {
     private String bname;
     private Double price;
     private String author;
-    private String did;
+    private String cid;
+    private String image;
 
-    public Book() {
+    public String getImage() {
+        return image;
     }
 
-    public Book(String bid, String bname, Double price, String author, String did) {
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public Book(String bid, String bname, Double price, String author, String cid, String image) {
         this.bid = bid;
         this.bname = bname;
         this.price = price;
         this.author = author;
-        this.did = did;
+        this.cid = cid;
+        this.image = image;
     }
+
+    public Book() {
+    }
+
 
     public String getBid() {
         return bid;
@@ -50,12 +61,12 @@ public class Book {
         this.author = author;
     }
 
-    public String getDid() {
-        return did;
+    public String getCid() {
+        return cid;
     }
 
-    public void setDid(String did) {
-        this.did = did;
+    public void setCid(String cid) {
+        this.cid = cid;
     }
 
     @Override
@@ -65,7 +76,8 @@ public class Book {
                 ", bname='" + bname + '\'' +
                 ", price=" + price +
                 ", author='" + author + '\'' +
-                ", did='" + did + '\'' +
+                ", cid='" + cid + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 }
