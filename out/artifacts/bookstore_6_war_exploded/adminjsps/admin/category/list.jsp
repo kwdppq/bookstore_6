@@ -32,9 +32,9 @@
     		<tr bordercolor="rgb(78,78,78)">
     		<td>${category.cname }</td>
     		<td>
-    		  <a href="<c:url value='/AdminCategoryServlet?method=editPre&cid=${category.cid }'/>">修改</a> |
+    		  <a href="<c:url value='/admin/AdminCategoryServlet?method=editPre&cid=${category.cid }'/>">修改</a> |
     		  <a onclick="return confirm('您真要删除此分类吗?')" 
-    		  href="<c:url value='/AdminCategoryServlet?method=delete&cid=${category.cid }'/>">删除</a>
+    		  href="<c:url value='/admin/AdminCategoryServlet?method=delete&cid=${category.cid }'/>">删除</a>
     		</td>
     	</tr>
     </c:forEach>

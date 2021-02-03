@@ -15,10 +15,10 @@ public class BookDaoImpl extends BaseDao implements BookDao {
         String sql = "select * from book limit ?, ?";
         Object[] objs = {(pageNo - 1) * pageSize, pageSize};
         List<Book> books = new ArrayList<>();
-        Book book = new Book();
         try {
             ResultSet resultSet = this.select(sql, objs);
             while (resultSet.next()) {
+                Book book = new Book();
                 book.setBid(resultSet.getString("bid"));
                 book.setBname(resultSet.getString("bname"));
                 book.setAuthor(resultSet.getString("author"));
