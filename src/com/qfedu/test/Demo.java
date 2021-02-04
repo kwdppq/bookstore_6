@@ -10,7 +10,7 @@ public class Demo {
     public static void main(String[] args) {
         BookServiceImpl bookService = new BookServiceImpl();
         BookDaoImpl bookDao = new BookDaoImpl();
-        List<Book> books = bookDao.selectBook(1, 10);
+        List<Book> books = bookService.selectBook();
         for (Book book : books) {
             System.out.println(book);
         }

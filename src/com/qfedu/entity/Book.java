@@ -7,6 +7,7 @@ public class Book {
     private String author;
     private String cid;
     private String image;
+    private Category category;
 
     public String getImage() {
         return image;
@@ -16,13 +17,12 @@ public class Book {
         this.image = image;
     }
 
-    public Book(String bid, String bname, Double price, String author, String cid, String image) {
-        this.bid = bid;
-        this.bname = bname;
-        this.price = price;
-        this.author = author;
-        this.cid = cid;
-        this.image = image;
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Book() {
@@ -78,6 +78,7 @@ public class Book {
                 ", author='" + author + '\'' +
                 ", cid='" + cid + '\'' +
                 ", image='" + image + '\'' +
+                ", category=" + category +
                 '}';
     }
 }

@@ -8,10 +8,26 @@ import com.qfedu.service.BookService;
 import java.util.List;
 
 public class BookServiceImpl implements BookService {
+    BookDao bookDao = new BookDaoImpl();
     @Override
-    public List<Book> selectBook(int pageNo, int pageSize) {
-        BookDao bookDao = new BookDaoImpl();
-        List<Book> books = bookDao.selectBook(pageNo, pageSize);
+    public List<Book> selectBook() {
+        List<Book> books = bookDao.selectBook();
+        return books;
+    }
+
+    @Override
+    public void add(Book book) {
+        bookDao.add(book);
+    }
+
+    @Override
+    public Book load(String bid) {
+        return bookDao.findByBid(bid);
+    }
+
+    @Override
+    public List<Book> findByCategory(String cid) {
+        List<Book> books = bookDao.findByCategory(cid);
         return books;
     }
 }

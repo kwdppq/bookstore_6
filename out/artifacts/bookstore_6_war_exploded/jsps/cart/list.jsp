@@ -59,7 +59,7 @@
 <table border="1" width="100%" cellspacing="0" background="black">
 
 <c:choose>
-	<c:when test="${empty sessionScope.cart.cartItems }">
+	<c:when test="${empty cartItems}">
 		<img src="<c:url value='/images/cart.png'/>"/>
 		<h1>您的购物车空空如也!赶紧下单吧!</h1>
 	</c:when>
@@ -78,7 +78,7 @@
 		<th>小计</th>
 		<th>操作</th>
 	</tr>
-	<c:forEach items="${sessionScope.cart.cartItems }" var="cartItem">
+	<c:forEach items="${cartItems}" var="cartItem">
 		<tr>
 		<td><div><img src="<c:url value='/${cartItem.book.image }'/>"/></div></td>
 		<td>${cartItem.book.bname }</td>

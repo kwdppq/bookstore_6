@@ -5,5 +5,8 @@ import com.qfedu.entity.Book;
 import java.util.List;
 
 public interface BookDao {
-    public List<Book> selectBook(int pageNo, int pageSize);
+    public List<Book> selectBook();
+    public void add(Book book);
+    public Book findByBid(String bid);
+    public List<Book> findByCategory(String cid);
 }
