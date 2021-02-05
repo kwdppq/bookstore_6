@@ -32,7 +32,6 @@ public class BaseDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	return result;
 	}
 	
@@ -40,9 +39,7 @@ public class BaseDao {
 		public ResultSet select(String sql,Object[] obj) throws Exception {
 			ResultSet result=null;
 			Connection  conn=getConn();
-			 PreparedStatement ps = conn.prepareStatement(sql);
-			 
-			 
+			PreparedStatement ps = conn.prepareStatement(sql);
 			for (int i = 0; i < obj.length; i++) {
 				ps.setObject(i+1, obj[i]);
 				
@@ -51,8 +48,4 @@ public class BaseDao {
 			result=ps.executeQuery();
 			return result;
 		}
-	
-	
-	
-
 }
