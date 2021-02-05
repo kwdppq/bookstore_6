@@ -28,7 +28,7 @@
   3,回显form
    --%>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/UserServlet'/>" method="post">
+<form action="<c:url value='/UserRegistServlet'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
 	用户名：<input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${requestScope.err.username }</span><br/>
